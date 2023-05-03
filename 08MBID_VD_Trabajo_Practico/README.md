@@ -14,3 +14,5 @@ spain_ufo_sightings.csv --> CSV creado con el notebook (le añado algunas variab
 UFO_sightings_Spain.csv --> CSV original descargado de Kaggle. Es el CSV que se necesita para ejecutar el notebook correctamente.
 
 Archivos.PNG --> Capturas embebidas en el proyecto StackBlitz
+
+StackBlitz_Project --> Carpeta con los archivos de StackBlitz
