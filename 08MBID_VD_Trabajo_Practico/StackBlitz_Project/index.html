@@ -1,0 +1,154 @@
+<div id="app">
+  <span class="negrita">Nombre: </span> José Ramón Moratalla Muñoz <br>
+  <span class="negrita">StackBlitz:</span>
+  <a href="https://js-zt1hnm.stackblitz.io" target="_blank">https://js-zt1hnm.stackblitz.io</a>
+  <br>
+  <span class="negrita">GitHub: </span>
+  <a href="https://github.com/jramon-mm/08MBID-Visualizacion-de-Datos" target="_blank">https://github.com/jramon-mm/08MBID-Visualizacion-de-Datos</a>
+  <br>
+  <span class="negrita">Google Colab: </span>
+  <a href="https://colab.research.google.com/drive/1o2IeG2SShYn2u8AbvCToNvivLTQ8FcdT?usp=sharing" target="_blank">https://colab.research.google.com/drive/1o2IeG2SShYn2u8AbvCToNvivLTQ8FcdT?usp=sharing</a>
+  <span class="negrita">Google Looker: </span>
+  <a href="https://lookerstudio.google.com/reporting/53350cf7-4755-479f-8f6b-b88d1d03c151" target="_blank">https://lookerstudio.google.com/reporting/53350cf7-4755-479f-8f6b-b88d1d03c151</a>
+  <h1 style="text-align: center; text-decoration: underline;">08MBID - Trabajo Práctico</h1>
+  <div style="text-align: justify;">
+    <h2>1. Introducción</h2>
+    <p>El término "OVNI" (Objeto Volador No Identificado) o, en inglés, UFO (Unidentified Flying Object) se utiliza para referirse a cualquier objeto en el cielo que no pueda ser identificado por el o los observadores. Los informes de avistamientos de ovnis se remontan a siglos atrás, pero, fue en la década de 1940 cuando el interés por este tipo de fenómenos creció debido a uno de los incidentes OVNI más famosos, el incidente OVNI de <a href="https://elpais.com/icon/cultura/2021-07-12/roswell-historia-de-una-ciudad-obsesionada-por-los-ovnis.html" target="_blank">Roswell</a>.
+    <br><br>
+    Estados Unidos es uno de los países que más fenómenos de este tipo registra. De hecho, para una definición más amplia, el término ha sido bautizado a UAP en inglés (Unidentified Flying Objects) por y FANI en español (Fenómenos Aéreos No Identificados), tal y cómo se indica en <a href="https://elpais.com/ciencia/2023-01-13/el-numero-de-ovnis-se-dispara-algunos-tienen-caracteristicas-de-vuelo-o-capacidades-inusuales.html" target="_blank">este artículo</a> del periódico "El Pais".
+    <br><br>
+    En España también se tienen registros de incidentes de este tipo desde hace bastante tiempo. El objetivo de este trabajo es conocer más acerca de la historia de este tipo de fenómenos en España. Se hablará, por tanto de, evolución de este tipo de fenómenos a lo largo del tiempo, sitios y ubicaciones en los que se han producido y posibles características comunes que estos incidentes han reportado a lo largo del tiempo.
+    <br><br>
+    Para ello, se utilizarán distintos tipos de visualizaciones y de herramientas de visualización. Además, como es obvio, necesitaremos un conjunto de datos. El conjunto de datos seleccionado para trabajar en el tema que nos ocupa es <a href="https://www.kaggle.com/datasets/carlmcbrideellis/ufo-sightings-in-spain-1538-2023" target="_blank">este dataset</a> de <a href="https://www.kaggle.com/" target="_blank">Kaggle</a>.
+    </p>
+
+    <h2>2. Metodología</h2>
+    <p>Como se ha comentado, la idea para este trabajo es utilizar varias herramientas de visualización de datos. Para ello, veamos, en primer lugar, las herramientas de visualización de datos que hemos visto a largo de esta asignatura.
+      <ul>
+        <li><strong><a href="https://www.google.com/sheets/about/" target="_blank">Google Sheets</a>: </strong>Herramienta fácil y sencilla proporcionada por Google. Está alojada en la nube y es gratuita. Permite crear gráficos sencillos pero no son interactivos. Sin embargo, la cantidad de datos que permite manejar no es muy grande. También permite compartir los gráficos para poder integrarlos en otras plataformas, como por ejemplo, StrackBlitz.</li>
+        <li><strong><a href="https://www.datawrapper.de/" target="_blank">Datawrapper</a>: </strong>De nuevo, herramienta en la nube. Muy sencilla de utilizar e intuitiva. Permite generar código HTML para integrar los gráficos en otras plataformas. Muy utilizada en medios de comunicación.</li>
+        <li><strong><a href="https://powerbi.microsoft.com/es-es/" target="_blank">Power BI</a>: </strong>Herramienta más avanzada. Permite tener un programa local (Power BI Deskpot) pero también tiene modalidad en nube. Permite manejar grandes conjuntos de datos e incluso cruzar varias fuentes de información. Al igual que las anteriores también posee diferentes formas de pulicar o compartir los gráficos.</li>
+        <li><strong><a href="https://d3js.org/" target="_blank">D3</a>:</strong> Biblioteca open source de JavaScript. Permite crear visualizaciones interactivas pero, sin embargo, la curva de aprendizaje es bastante elevada. Permite diseños responsives y una de sus grandes ventajas es el vínculo entre los datos y el gráfico ya que si se cambia el dato, se cambia el gráfico.</li>
+        <li><strong><a href="https://www.python.org/" target="_blank">Python</a>: </strong>Python es un conocido lenguaje de programación. Posee múltiples librerias para el análisis y trabajo con conjuntos de datos. Una de las librerías para trabajar con dataset más conocidas es <a href="https://pandas.pydata.org/" target="_blank">Pandas</a>. De igual manera, posee numerosas librerías para la visualización de datos. En este sentido, <a href="https://seaborn.pydata.org/" target="_blank">Seaborn</a> es una de las más famosas.</li>
+      </ul>
+      
+    Ahora, hagamos algo de investigación acerca de las herramientas y/o plataformas que hay disponibles en el mercado para visualización de datos. En <a href="https://www.forbes.com/advisor/business/software/best-data-visualization-tools/" target="_blank">este artículo de Forbes</a> se recogen las mejores herramientas de visualización de 2023 (según Forbes). También se indican pros y contras de cada una y una anotación que indica para qué ámbito de visualización de datos en concreto es muy recomendable cada herramienta. Hagámos una revisión rápida del top 5 de estas herramientas según Forbes:
+      <ul>
+        <li><strong><a href="https://powerbi.microsoft.com/es-es/" target="_blank">Power BI</a>: </strong>Según Forbes esta es la mejor herramienta de 2023. Destacan su precio competitivo e integración con productos Microsoft y sus servicios cloud. Como desventajas, reportan un alto uso de CPU y la incompatibilidad de la versión de escritorio con el sistema operativo MacOs.</li>
+        <li><strong><a href="https://www.tableau.com/es-es" target="_blank">Tableau</a>:</strong> La definen como la mejor herramienta para visualizaciones interactivas. Destacan su capacidad para crear Dashboard narrativos y su integración con <a href="https://slack.com/intl/es-es/" target="_blank">Slack</a>. Como desventajas reportan una curva de aprendizaje dura y su alto precio.</li>
+        <li><strong><a href="https://www.qlik.com/es-es/products/qlik-sense" target="_blank">Qlik Sense</a>: </strong>Lo señalan como mejor opción para dashboard personalizados. Como ventajas destacan su integración con numerosas plataformas, su plan gratuito y las métricas de uso que ofrece. Como desventajas reportan que el plan gratuito no permite descargar reportes en PDF.</li>
+        <li><strong><a href="https://www.qlik.com/es-es/products/qlik-sense" target="_blank">Qlik Sense</a>: </strong>Lo señalan como mejor opción para inteligencia artificial. Como ventajas destacan la posibilidad de automatizar acciones y facilidades de cara a AI insights. Como desventajas reportan que se necesita mejorar la interfaz de usuario.</li>
+        <li><strong><a href="https://www.klipfolio.com/" target="_blank">Klipfolio</a>: </strong>Lo señalan como mejor opción para dashboard personalizados. Como ventajas destacan su integración con numerosas plataformas, su plan gratuito y las métricas de uso que ofrece. Como desventajas reportan que el plan gratuito no permite descargar reportes en PDF.</li>
+        <li><strong><a href="https://lookerstudio.google.com/overview" target="_blank">Looker</a>: </strong>Herramienta de Google. Como ventajas destacan la presencia de plugins que mejorarán nuestras visualizaciones, su interfaz drag-and-drop y sus bonitos diseños visuales. Como desventajas reportan limitaciones de personalización y un mal funcionamiento con conjunto de datos grandes.</li>
+      </ul>
+    
+    Para concluir esta parte, daré mi opinión subjetiva acerca de una de las herramientas mencionadas anteriormente ya que he podido trabajar con ella en la empresa para la que trabajaba. Esta herramienta es Tableau. Para mí Tableau es la mejor herramienta de visualización y tratamiento de datos. Aunque es cierto que es bastante cara, ofrece muchísimas alternativas para tratar con datos, visualizarlos y, además, lo hace de manera rápida incluso con conjuntos de datos grandes. Esto, en parte, es por el motor de datos que tiene por debajo. Dicho motor, se llama <a href="https://www.tableau.com/es-es/products/new-features/hyper" target="_blank">Hyper</a> y ayuda a agilizar las consultas e integraciones entre distintas fuentes de datos.
+
+    Otra de las características que más megusta es su facilidad a la hora de preparar los datos para la visualización. Gracias a <a href="https://www.tableau.com/es-es/products/prep" target="_blank">Tableau Prep</a>, podemos crear flujos que transformen y limpien nuestros datos. Posteriormente, podremos crear las visualizaciones necesarias con <a href="https://www.tableau.com/es-es/products/desktop" target="_blank">Tableau Desktop</a>.
+    <br><br>
+    Para terminar este apartado indicaré las herramientas que voy a usar y el motivo. Las herramientas que voy a usar son: Python y Power BI. La razón para usar Python es que, al venir de Ingeniería Informática, me siento cómodo programando y dada la versatilidad de Python podré probablemente acceder a todo lo necesario para optar a toda la nota de este trabajo. De hecho, la idea es utilizarlo para visualizar datos de manera interactiva e, incluso, ver si se puede añadir algún filtro.
+    <br><br>
+    En segundo lugar, usaré Power BI para ver si, en lo personal, me gusta más que Tableau. También tengo curiosidad de comprobar si es tan buena como la revista Forbes indica ya que, las veces que lo he usado para hacer alguna prueba, no me ha terminado de convencer.
+    </p>
+
+    <h2>3. Resultados</h2>
+    <h3>3.1 Número de avistamientos a lo largo de los años (Python con Seaborn y Plotty)</h3>
+    <p>En primer lugar, puesto que los datos que tenemos constituyen una serie temporal en la cuál se indican avistamientos de OVNIs en España reportados a lo largo de los años, las preguntas que vamos a tratar de contestar, todas acotadas en términos de territorio al territorio español son:
+      <ul>
+        <li>¿Cómo se distribuyen los avistamientos a lo largo de los años?</li>
+        <li>¿Se producen muchos avistamientos?</li>
+        <li>¿Ha podido afectar la aparición de tecnología como cámaras de fotos, cámaras de vídeo o teléfonos inteligentes al reporte de este tipo de fenómenos?</li>
+      </ul>
+      
+      Para responder a estas preguntas es evidente que necesitamos ser capaces de graficar el número de avistamientos que se producen a lo largo de los años. Para ello, podríamos usar un gráfico de columnas o un gráfico de barras pero, lo que, en mi opinión, mejor se ajusta a lo que queremos representar es un gráfico de líneas dónde el eje x sea el tiempo, en este caso los años, y el eje y sea el número de avistamientos de esos años.
+
+      Todo esto está hecho y explicado en el cuaderno de Google Colab por lo que, en este punto, recomiendo visitarlo a través del link que está al inicio de este PDF. En cualquier caso, procedo a explicar el proceso que he hecho en el Colab:
+        <ol>
+          <li>Carga de los datos desde un CSV.</li>
+          <li>Agrupamiento de los datos en función del año. El resultado es un conjunto de datos con dos columnas "year" y "sightings".</li>
+          <li>Creación de gráfico de líneas no interactivo con Seaborn.</li>
+          <li>Creación de gráfico de líneas interactivo con Plotty.</li>
+        </ol>
+      
+      Por último, adjunto el gráfico final interactivo con Plotty mediante captura de pantalla. De nuevo, recomiendo visitar el notebook de Google Colab para así poder ver como se interactúa con el gráfico de Plotty.
+      <br><br>
+      <div style="text-align: center;">
+        <img src="https://raw.githubusercontent.com/jramon-mm/08MBID-Visualizacion-de-Datos/main/08MBID_VD_Trabajo_Practico/Plotty_Line_Graph.PNG" width="750" height="500">
+      </div>
+      
+      Con la imagen anterior ya seríamos capaces de contestar las preguntas que hemos formulado. En primer lugar vemos que el año que más avistamientos se producen es 1846 y se producen 4 avistamientos. El resto de los años oscila entre 2, 3 y 1. De hecho la mayoría de los años se produce tan sólo 1 avistamiento. Por lo tanto, podemos decir que no se producen muchos avistamientos. De hecho, personalmente, cuando estaba visualizando los datos me he sorprendido ya que esperaba que hubiese más avistamientos.
+      <br><br>
+      Para acabar con esta ronda de preguntas, podemos afirmar que la aparición de tecnologías como cámara de fotos, cámara de vídeo o smartphones no incrementó el número de este tipo de fenómenos al menos en España. Esta última afirmación me resulta bastante extraña pero es lo que los datos nos dicen. Para contrastarlo mejor habría que buscar otras bases de datos que contenga información acerca de este tipo de fenómenos en España y comparar resultados.
+    </p>
+    <h3>3.2 Lugar de los avistamientos (Python con Seaborn - Plotty)</h3>
+    <p>El siguiente paso, ahora que hemos visto la distribución de los avistamientos y, puesto que tenemos información de la ubicación de los mismos, sería visualizar geográficamente dónde se han producido cada uno de ellos. Para ello, de nuevo utilizaremos Python. Las preguntas a responder son:
+      <ul>
+        <li>¿Dónde se producen los avistamientos?</li>
+        <li>¿Hay alguna zona de España dónde sea más frecuente este tipo de fenómenos?</li>
+      </ul>
+      
+      El gráfico a utilizar en este caso está bastante claro, utilizaremos un gráfico de Mapa. Para ello utilizaremos la librería Folium. Esta librería la hemos utilizado en clase. El proceso está, de nuevo, explicado en Google Colab por lo que recomiendo visitarlo para verlo. No obstante, el gráfico obtenido es:
+      <br>
+      <div style="text-align: center;">
+        <img src="https://raw.githubusercontent.com/jramon-mm/08MBID-Visualizacion-de-Datos/main/08MBID_VD_Trabajo_Practico/Folium_Map_Graph.PNG" width="750" height="500">
+      </div>
+      
+      Como se puede ver, se ha añadido como "popup" el año en el que se produjo el evento. En cuanto a la respuesta a las preguntas, la respuesta a la primera es el propio gráfico en sí, mientras que, respecto a la respuesta a la segunda pregunta, podemos ver en el gráfico que hay dos agrupamientos claros. Uno al sur y sureste de España, otro al norte y noreste de España. Vemos también que en la zona centro no hay ningún caso. Extremadura, Castilla-La Mancha y Madrid serían las comunidades que carecen de este tipo de fenómenos.
+
+      <h3>3.3 Comparación de los incidentes más comunes (Power BI)</h3>
+      <p>Ahora que hemos visto la distribución de los eventos a lo largo de los año y la ubicación de los mismos vamos a focalizar en que ha ocurrido en los eventos. Para ello, nuestro conjunto de datos tiene una serie de eventos comunes que suelen ocurrir en este tipo de fenómenos y, para cada registro, se indica si este evento ha ocurrido o no. Las preguntas para este apartado podrían ser: 
+        <ul>
+          <li>¿Cuál es el evento más común?</li>
+          <li>¿Podría tener algún tipo de relación el evento más común con la zona en la que se producen los avistamientos?</li>
+        </ul>
+      La idea para adjuntar este gráfico era adjuntarlo mediante un iframe. Sin embargo, VirtualLabs carece de la opción que, según las diapositivas, se necesita para poder generar el código del iframe. Adjunto captura para que quede claro que la opción no está presente.
+      <div style="text-align: center;">
+        <img src="https://raw.githubusercontent.com/jramon-mm/08MBID-Visualizacion-de-Datos/main/08MBID_VD_Trabajo_Practico/opci%C3%B3n_faltante.PNG" width="750" height="500">
+      </div>
+      <br>
+      Volviendo al trabajo, lo ideal para representar la ocurrencia de cada una de las características en los avistamientos sería un gráfico de barras o uno de columnas. Simplemente se quiere ver la cantidad de veces que ha ocurrido cada uno de los eventos. Por dicho motivo, cualquiera de los dos tipos (barras o columnas) valdría. Personalmente, me gustan más los diagramas de barras que los de columnas. Por dicho motivo haré un diagrama de barras. Además, ordenaré los datos de mayor frecuencia a menor frecuencia. El gráfico resultantes es: 
+      <div style="text-align: center;">
+        <img src="https://raw.githubusercontent.com/jramon-mm/08MBID-Visualizacion-de-Datos/main/08MBID_VD_Trabajo_Practico/Power_Bi_GraphPNG.PNG" width="750" height="500">
+      </div>
+      Con este gráfico, podemos responder a las preguntas. El evento más común es el avistamiento un extraterrestre y lo menos común son las abducciones. El segundo lugar es para los incidentes con vacas. A falta de un análisis más exhaustivo, esto puede llegar a tener sentido teniendo en cuenta que mucha concentración de avistamientos estaba en la parte norte de España dónde, comunmente, están la mayoría de las ganaderías bovinas.
+    </p>
+    <h3>3.4 Complejidad de los avistamientos (Power BI)</h3>
+    <p>En este último apratado, lo que se va a tratar de dotar de algún tipo de medida de calidad a los avistamientos. Hemos visto que por cada avistamiento hay varios eventos que pueden suceder en dicho avistamiento. Con Google Colab, se ha generado una nueva columna para categorizar el nivel de complejidad de los avistamientos, siendo esta variable un entero del 1 al 4 indicando qué cantidad de estos eventos se da en un mismo registro. Las preguntas que se quieren responder durante este apartado son:
+      <ul>
+        <li>¿Se producen varios eventos en un mismo avistamiento?</li>
+        <li>¿Se podría categorizar los avistamientos en niveles de complejidad, siendo la complejidad mayor cuanto más eventos ocurren?</li>
+        <li>¿De qué nivel serían más comunes los avistamientos?</li>
+        <li>¿Hay algún avistamiento en el que se hayan producido todos los eventos?</li>
+      </ul>
+    Para este gráfico hay dos opciones. La primera de las dos opciones es un gráfico de sectores. Hay que tener cuidado con este tipo de gráficos ya que si hay sectores muy pequeños no se distinguen bien los sectores. En nuestro caso, sólo hay 4 sectores. Veamos como sale y decidamos si lo mantenamos o no. El gráfico sería:
+    <div style="text-align: center;">
+      <img src="https://raw.githubusercontent.com/jramon-mm/08MBID-Visualizacion-de-Datos/main/08MBID_VD_Trabajo_Practico/Power_Bi_Graph_2.PNG" width="750" height="500">
+    </div>
+    Como se puede comprobar el gráfico de sectores no es del todo malo. Cierto es que hay un sector que sin etiqueta debido a que es muy pequeño pero el resto de sectores están bastante bien diferenciados. De hecho, podemos responder a las preguntas. Vemos que sí se producen varios eventos en un mismo avistamiento, que, tal y como hemos hecho si se puede categorizar los avistamientos en niveles de complejidad y que el nivel de complejidad más común entre todos los avistamientos es el nivel uno.
+    <br>
+    Lo que también hemos visto, es que hay avistamientos en lo que no se producen ningún tipo de evento de los tipos que tenemos registrados. Estos avistamientos serían los de complejidad 0. Por último, podemos afirmar que no hay ningún avistamiento en el que se hayan producido todos los eventos a la vez. Este gráfico aporta bastante valor ya que, si fuera un investigador de este tipo de eventos, querría analizar un avistamiento en el que se hayan producido muchos eventos a la vez antes que uno menos complejo. 
+    <br>
+    Finalmente, adjunto un gráfico de columnas con esta misma información para ver cómo se quedaría y elegir uno de los dos como el definitivo. 
+    <div style="text-align: center;">
+      <img src="https://raw.githubusercontent.com/jramon-mm/08MBID-Visualizacion-de-Datos/main/08MBID_VD_Trabajo_Practico/Power_Bi_Graph_3_good.PNG" width="750" height="500">
+    </div>
+    Personalmente y, aunque cualquiera de los dos podría valer, me quedaría antes con el gráfico de columnas. El motivo es que no me termina de gustar que la etiqueta no se vea. Por ello, elijo el gráfico de columnas.
+    <h3>3.5 Dashboard (Google Looker Studio)</h3>
+    Para crear el dashboard con los gráficos se usará Google Looker Studio. Aunque se adjutará a la entrega un PDF y se ha adjuntado el link del proyecto de Google Looker al inicio del documento, adjunto captura del dashboard: 
+    <div style="text-align: center;">
+      <img src="https://raw.githubusercontent.com/jramon-mm/08MBID-Visualizacion-de-Datos/main/08MBID_VD_Trabajo_Practico/Dashboard.PNG" width="750" height="500">
+    </div>
+    No he podido crear el diagrama de eventos ocurridos de otra forma que no fuese una tabla. Probablemente esto es debido al desconocimiento del manejo de Google Looker. He de decir que me ha gustado bastante aunque he de profundizar más en la herramienta.
+    </p>
+    <h2>4. Conclusiones</h2>
+    <p>Como conclusiones, podemos sacar:
+      <ul>
+        <li>Al menos según la fuente de datos con la que hemos trabajado, parece que el fenómeno OVNI en España no es muy común ya que hay pocos casos (el año que más casos ha habido han sido 4 casos).</li>
+        <li>Los fenómenos se dan sobre todo en la parte norte y sur de la península. La parte central de la península (Extremadura, Castilla-La Mancha y Madrid) no presentan ningún caso. De nuevo, esto, según la fuente de datos utilizada.</li>
+        <li>Los avances tecnológicos como cámaras de vídeo, cámaras de fotos y smartphones no han ayudado a incrementar este tipo de fenómenos en España, al menos, según la fuente de datos utilizada.</li>
+        <li>El evento más común es el avistamiento de un extraterrestre seguido de los incidentes con las vacas.</li>
+        <li>La mayor parte de los casos sólo corresponden a un evento, probablemente, a un simple avistamiento de un extraterrestre. No hay ningún caso con complejidad extrema.</li>
+      </ul>
+    </p>
+  </div>
+</div>
